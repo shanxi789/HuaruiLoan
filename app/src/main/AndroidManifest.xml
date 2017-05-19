@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mzth.huaruiloan">
+    <!--网络权限-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--SD卡读写权限-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--支付宝支付权限-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--银联支付-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-feature android:name="android.hardware.nfc.hce"/>
+    <!--拨打电话的权限-->
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_48_mdpi"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:name=".common.MainApplication">
+        <activity android:name=".ui.activity.sub.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--登录页面-->
+        <activity
+            android:name=".ui.activity.sub.LoginActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!--注册页面-->
+        <activity
+            android:name=".ui.activity.sub.RegisterActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!--完善资料-->
+        <activity
+            android:name=".ui.activity.sub.PerfectDataActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!--主页面-->
+        <activity
+            android:name=".ui.activity.sub.HomeActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!--忘记密码页面-->
+        <activity
+            android:name=".ui.activity.sub.FindPwdActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!--重置密码页面-->
+        <activity
+            android:name=".ui.activity.sub.ReSetPwdActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!--重置密码成功页面-->
+        <activity
+            android:name=".ui.activity.sub.PwdReSetSureActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!--我的资料页面-->
+        <activity
+            android:name=".ui.activity.sub.user.UserInfoActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!--修改密码页面-->
+        <activity
+            android:name=".ui.activity.sub.user.UpdatePwdActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!--历史记录页面-->
+        <activity
+            android:name=".ui.activity.sub.user.HistoryActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!--借款银行卡页面-->
+        <activity
+            android:name=".ui.activity.sub.user.BankCardActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!--借款银行卡详情页面-->
+        <activity
+            android:name=".ui.activity.sub.user.BankCardDetailActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!--添加银行卡页面-->
+        <activity
+            android:name=".ui.activity.sub.user.AddBankCardActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!--支付宝支付页面-->
+        <activity
+            android:name=".ui.activity.sub.home.SingleActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!--银联支付页面-->
+        <activity
+            android:name=".ui.activity.sub.home.PayMentActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!--翼支付页面-->
+        <activity
+            android:name=".ui.activity.sub.home.WingPayMentActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!--web订单页面-->
+        <activity
+            android:name=".ui.activity.sub.WebOrderActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+
+        <!-- 支付宝支付 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <!--银联支付-->
+        <uses-library
+            android:name="org.simalliance.openmobileapi"
+            android:required="false" />
+        <activity
+            android:name="com.unionpay.uppay.PayActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.unionpay.UPPayWapActivity"
+            android:configChanges="orientation|keyboardHidden|fontScale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+    </application>
+
+</manifest>

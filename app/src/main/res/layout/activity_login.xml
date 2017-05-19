@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray">
+
+    <include layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/ll_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/white">
+        <EditText
+            android:id="@+id/et_put_phone"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="请输入手机号"
+            android:textSize="15sp"
+            android:inputType="number"
+            android:drawableLeft="@mipmap/icon_sign01"
+            android:drawablePadding="10dp"
+            android:layout_gravity="center_vertical"
+            android:background="@null" />
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/gray"/>
+        <EditText
+            android:id="@+id/et_put_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="请输入8-16位密码"
+            android:drawableLeft="@mipmap/icon_sign02"
+            android:drawablePadding="10dp"
+            android:background="@null"
+            android:textSize="15sp"
+            android:inputType="textPassword"/>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/gray"/>
+    </LinearLayout>
+        <TextView
+            android:id="@+id/tv_find_pwd"
+            android:layout_below="@id/ll_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="忘记密码"
+            android:layout_alignParentRight="true"
+            android:layout_margin="15dp"/>
+    </RelativeLayout>
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="登录"
+        android:layout_margin="15dp"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:background="@drawable/corners_bg"/>
+</LinearLayout>
